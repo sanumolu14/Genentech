@@ -193,17 +193,25 @@ adsl <- adsl_preds %>%
 
 adsl <- adsl %>%
   mutate(LSTAVLDT = as.Date(LSTAVLDT1)) %>% 
-    select(AGEGR9,AGEGR9N,TRTSDTM,TRTSTMF,ITTFL,LSTAVLDT,STUDYID, USUBJID, SUBJID, SITEID,  ARM, 
-            TRTSDT, AGE, AGEU, RACE,  SEX, ETHNIC, ITTFL, DTHFL, RFSTDTC, RFENDTC)
+    select(STUDYID, USUBJID,  ITTFL, AGEGR9,AGEGR9N,TRTSDTM,TRTSTMF,LSTAVLDT)
 
-dir <- tempdir('C:/Users/suvar/Rworkdr/Genentech/data/adam') # Specify the directory for saving the XPT file
-dir1 <- "C:/Users/suvar/Rworkdr/Genentech" # Specify the directory for metadata
+attr(adsl$ITTFL, "label") <- "Intent to Treatment Population Flag"
+attr(adsl$AGEGR9, "label") <- "Age group9"
+attr(adsl$AGEGR9N, "label") <- "Age group9 (N)"
+attr(adsl$TRTSDTM, "label") <- "Treatment Start Date/Time"
+attr(adsl$TRTSTMF, "label") <- "Treatment Start Time Imputation Flag"
+attr(adsl$LSTAVLDT, "label") <- "Last Avaluation Date"
 
-metacore <- spec_to_metacore(
-  path = file.path(dir1, "metadata/adam_specs.xlsx"),
-  where_sep_sheet = FALSE
-) %>%
-  select_dataset("ADSL")
+
+
+# dir <- tempdir('C:/Users/suvar/Rworkdr/Genentech/data/adam') # Specify the directory for saving the XPT file
+# dir1 <- "C:/Users/suvar/Rworkdr/Genentech" # Specify the directory for metadata
+# 
+# metacore <- spec_to_metacore(
+#   path = file.path(dir1, "metadata/adam_specs.xlsx"),
+#   where_sep_sheet = FALSE
+# ) %>%
+#   select_dataset("ADSL")
 
 # adsl %>%
 #   # check_variables(metacore) %>% # Check all variables specified are present and no more
