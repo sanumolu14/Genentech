@@ -1,0 +1,253 @@
+--------------------------------------------------------------------------------
+-                                logrx Metadata                                -
+--------------------------------------------------------------------------------
+This log was generated using logrx 0.4.0
+logrx package version: 0.4.0
+logrx build: CRAN (R 4.4.3)
+logrx link to repository: https://github.com/pharmaverse/logrx
+--------------------------------------------------------------------------------
+-                          User and File Information                           -
+--------------------------------------------------------------------------------
+User: suvar
+File Name: 02_create_Visualization.R
+File Path: C:/Users/suvar/Rworkdr/Genentech/programs/question_3_tlg
+File HashSum: 50590e4e8d5a4a77af4a21c4ca946df299358825
+--------------------------------------------------------------------------------
+-                             Session Information                              -
+--------------------------------------------------------------------------------
+─ Session info ─────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.4.1 (2024-06-14 ucrt)
+ os       Windows 11 x64 (build 26200)
+ system   x86_64, mingw32
+ ui       RStudio
+ language (EN)
+ collate  English_United States.utf8
+ ctype    English_United States.utf8
+ tz       America/New_York
+ date     2026-04-29
+ rstudio  2025.09.2+418 Cucumberleaf Sunflower (desktop)
+ pandoc   NA
+ quarto   ERROR: Unknown command
+	  "TMPDIR=C:/Users/suvar/AppData/Local/Temp/RtmpyEn85g/file86c06a023472".
+	  Did you mean command "serve"? @
+	  C:\\PROGRA~1\\RStudio\\RESOUR~1\\app\\bin\\quarto\\bin\\quarto.exe
+
+─ Packages ─────────────────────────────────────────────────────────────────────
+ package         * version date (UTC) lib source
+ admiral         * 1.4.1   2026-02-03 [1] CRAN (R 4.4.3)
+ admiraldev        1.4.0   2026-01-14 [1] CRAN (R 4.4.1)
+ assertthat        0.2.1   2019-03-21 [1] CRAN (R 4.4.3)
+ cards             0.7.1   2025-12-02 [1] CRAN (R 4.4.3)
+ cellranger        1.1.0   2016-07-27 [1] CRAN (R 4.4.3)
+ cli               3.6.6   2026-04-09 [1] CRAN (R 4.4.3)
+ commonmark        2.0.0   2025-07-07 [1] CRAN (R 4.4.3)
+ digest            0.6.37  2024-08-19 [1] CRAN (R 4.4.3)
+ dplyr           * 1.2.1   2026-04-03 [1] CRAN (R 4.4.3)
+ evaluate          1.0.5   2025-08-27 [1] CRAN (R 4.4.3)
+ farver            2.1.2   2024-05-13 [1] CRAN (R 4.4.3)
+ fastmap           1.2.0   2024-05-15 [1] CRAN (R 4.4.3)
+ forcats         * 1.0.1   2025-09-25 [1] CRAN (R 4.4.3)
+ fs                2.0.1   2026-03-24 [1] CRAN (R 4.4.3)
+ generics          0.1.4   2025-05-09 [1] CRAN (R 4.4.3)
+ ggplot2         * 4.0.3   2026-04-22 [1] CRAN (R 4.4.3)
+ glue              1.8.0   2024-09-30 [1] CRAN (R 4.4.2)
+ gt              * 1.3.0   2026-01-22 [1] CRAN (R 4.4.3)
+ gtable            0.3.6   2024-10-25 [1] CRAN (R 4.4.3)
+ gtsummary       * 2.5.0   2025-12-05 [1] CRAN (R 4.4.3)
+ haven           * 2.5.5   2025-05-30 [1] CRAN (R 4.4.3)
+ hms               1.1.3   2023-03-21 [1] CRAN (R 4.4.2)
+ htmltools         0.5.8.1 2024-04-04 [1] CRAN (R 4.4.3)
+ janitor           2.2.1   2024-12-22 [1] CRAN (R 4.4.3)
+ knitr             1.50    2025-03-16 [1] CRAN (R 4.4.3)
+ labeling          0.4.3   2023-08-29 [1] CRAN (R 4.4.0)
+ lifecycle         1.0.5   2026-01-08 [1] CRAN (R 4.4.3)
+ litedown          0.7     2025-04-08 [1] CRAN (R 4.4.3)
+ logrx           * 0.4.0   2025-05-05 [1] CRAN (R 4.4.3)
+ lubridate       * 1.9.5   2026-02-04 [1] CRAN (R 4.4.3)
+ magrittr          2.0.3   2022-03-30 [1] CRAN (R 4.4.2)
+ markdown          2.0     2025-03-23 [1] CRAN (R 4.4.3)
+ metacore        * 0.3.0   2026-04-22 [1] CRAN (R 4.4.3)
+ metatools       * 0.3.0   2026-04-28 [1] CRAN (R 4.4.1)
+ NLP               0.3-2   2024-11-20 [1] CRAN (R 4.4.2)
+ pharmaverseadam * 1.3.0   2026-02-20 [1] CRAN (R 4.4.3)
+ pharmaverseraw  * 0.1.1   2025-08-30 [1] CRAN (R 4.4.3)
+ pharmaversesdtm * 1.4.1   2026-03-30 [1] CRAN (R 4.4.3)
+ pillar            1.11.0  2025-07-04 [1] CRAN (R 4.4.3)
+ pkgconfig         2.0.3   2019-09-22 [1] CRAN (R 4.4.2)
+ purrr           * 1.1.0   2025-07-10 [1] CRAN (R 4.4.3)
+ R6                2.6.1   2025-02-15 [1] CRAN (R 4.4.2)
+ ragg              1.5.0   2025-09-02 [1] CRAN (R 4.4.3)
+ RColorBrewer      1.1-3   2022-04-03 [1] CRAN (R 4.4.0)
+ Rcpp              1.0.14  2025-01-12 [1] CRAN (R 4.4.3)
+ readr             2.1.5   2024-01-10 [1] CRAN (R 4.4.3)
+ readxl            1.4.5   2025-03-07 [1] CRAN (R 4.4.3)
+ rlang             1.2.0   2026-04-06 [1] CRAN (R 4.4.1)
+ roxygen2          7.3.3   2025-09-03 [1] CRAN (R 4.4.3)
+ rstudioapi        0.17.1  2024-10-22 [1] CRAN (R 4.4.3)
+ S7                0.2.0   2024-11-07 [1] CRAN (R 4.4.3)
+ sass              0.4.10  2025-04-11 [1] CRAN (R 4.4.3)
+ scales            1.4.0   2025-04-24 [1] CRAN (R 4.4.3)
+ sdtm.oak        * 0.2.0   2025-05-22 [1] CRAN (R 4.4.3)
+ sessioninfo       1.2.3   2025-02-05 [1] CRAN (R 4.4.3)
+ slam              0.1-55  2024-11-13 [1] CRAN (R 4.4.2)
+ snakecase         0.11.1  2023-08-27 [1] CRAN (R 4.4.3)
+ stringi           1.8.7   2025-03-27 [1] CRAN (R 4.4.3)
+ stringr         * 1.6.0   2025-11-04 [1] CRAN (R 4.4.3)
+ systemfonts       1.2.3   2025-04-30 [1] CRAN (R 4.4.3)
+ textshaping       1.0.3   2025-09-02 [1] CRAN (R 4.4.3)
+ tibble            3.3.1   2026-01-11 [1] CRAN (R 4.4.3)
+ tidyr           * 1.3.2   2025-12-19 [1] CRAN (R 4.4.3)
+ tidyselect        1.2.1   2024-03-11 [1] CRAN (R 4.4.2)
+ timechange        0.4.0   2026-01-29 [1] CRAN (R 4.4.3)
+ tm                0.7-16  2025-02-19 [1] CRAN (R 4.4.3)
+ tzdb              0.5.0   2025-03-15 [1] CRAN (R 4.4.3)
+ vctrs             0.7.3   2026-04-11 [1] CRAN (R 4.4.3)
+ withr             3.0.2   2024-10-28 [1] CRAN (R 4.4.2)
+ xfun              0.53    2025-08-19 [1] CRAN (R 4.4.3)
+ xml2              1.4.0   2025-08-20 [1] CRAN (R 4.4.3)
+ xportr          * 0.3.1   2023-09-14 [1] CRAN (R 4.4.1)
+
+ [1] C:/Users/suvar/AppData/Local/R/win-library/4.4
+ [2] C:/Program Files/R/R-4.4.1/library
+ * ── Packages attached to the search path.
+
+─ External software ────────────────────────────────────────────────────────────
+ setting        value
+ cairo          1.18.0
+ cairoFT
+ pango
+ png            1.6.42
+ jpeg           9.6
+ tiff           LIBTIFF, Version 4.6.0
+ tcl            8.6.13
+ curl           8.6.0
+ zlib           1.3.1
+ bzlib          1.0.8, 13-Jul-2019
+ xz             5.4.6
+ deflate        1.19
+ PCRE           10.43 2024-02-16
+ ICU            74.2
+ TRE            TRE 0.8.0 R_fixes (BSD)
+ iconv          win_iconv
+ readline
+ BLAS
+ lapack
+ lapack_version 3.12.0
+
+─ Python configuration ─────────────────────────────────────────────────────────
+ Python is not available
+
+────────────────────────────────────────────────────────────────────────────────
+--------------------------------------------------------------------------------
+-                               Masked Functions                               -
+--------------------------------------------------------------------------------
+function `adsl` from {package:xportr, package:pharmaverseadam} by .GlobalEnv
+function `metacore` from {package:metacore} by .GlobalEnv
+function `ae` from {package:pharmaversesdtm} by .GlobalEnv
+function `dm` from {package:pharmaversesdtm} by .GlobalEnv
+function `ds` from {package:pharmaversesdtm} by .GlobalEnv
+function `ex` from {package:pharmaversesdtm} by .GlobalEnv
+function `suppdm` from {package:pharmaversesdtm} by .GlobalEnv
+function `vs` from {package:pharmaversesdtm} by .GlobalEnv
+function `ds_raw` from {package:pharmaverseraw} by .GlobalEnv
+function `adae` from {package:pharmaverseadam} by .GlobalEnv
+function `tbl` from {package:dplyr} by .GlobalEnv
+function `dir` from {package:base} by .GlobalEnv
+function `%>%` from {package:gtsummary, package:tidyr, package:admiral, package:metatools, package:metacore, package:stringr, package:purrr, package:forcats, package:dplyr} by package:gt
+function `all_of` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `any_of` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `contains` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `ends_with` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `everything` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `matches` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `num_range` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `one_of` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `starts_with` from {package:gtsummary, package:tidyr, package:dplyr} by package:gt
+function `vars` from {package:gtsummary, package:ggplot2, package:dplyr} by package:gt
+function `where` from {package:gtsummary, package:dplyr} by package:gt
+function `as_tibble` from {package:tidyr, package:dplyr} by package:gtsummary
+function `last_col` from {package:tidyr, package:dplyr} by package:gtsummary
+function `mutate` from {package:dplyr} by package:gtsummary
+function `select` from {package:dplyr} by package:gtsummary
+function `ms` from {package:pharmaversesdtm} by package:lubridate
+function `intersect` from {package:dplyr, package:base} by package:lubridate
+function `setdiff` from {package:dplyr, package:base} by package:lubridate
+function `union` from {package:dplyr, package:base} by package:lubridate
+function `Arith` from {package:methods} by package:lubridate
+function `Compare` from {package:methods} by package:lubridate
+function `show` from {package:methods} by package:lubridate
+function `as.difftime` from {package:base} by package:lubridate
+function `date` from {package:base} by package:lubridate
+function `tibble` from {package:dplyr} by package:tidyr
+function `tribble` from {package:dplyr} by package:tidyr
+function `desc` from {package:dplyr} by package:admiral
+function `as_factor` from {package:forcats} by package:haven
+function `ts` from {package:stats} by package:pharmaversesdtm
+function `cm` from {package:grDevices} by package:pharmaversesdtm
+function `%||%` from {package:base} by package:purrr
+function `as_label` from {package:dplyr} by package:ggplot2
+function `enexpr` from {package:dplyr} by package:ggplot2
+function `enexprs` from {package:dplyr} by package:ggplot2
+function `enquo` from {package:dplyr} by package:ggplot2
+function `enquos` from {package:dplyr} by package:ggplot2
+function `ensym` from {package:dplyr} by package:ggplot2
+function `ensyms` from {package:dplyr} by package:ggplot2
+function `expr` from {package:dplyr} by package:ggplot2
+function `quo` from {package:dplyr} by package:ggplot2
+function `quo_name` from {package:dplyr} by package:ggplot2
+function `quos` from {package:dplyr} by package:ggplot2
+function `sym` from {package:dplyr} by package:ggplot2
+function `syms` from {package:dplyr} by package:ggplot2
+function `Position` from {package:base} by package:ggplot2
+function `filter` from {package:stats} by package:dplyr
+function `lag` from {package:stats} by package:dplyr
+function `setequal` from {package:base} by package:dplyr
+function `plot` from {package:base} by package:graphics
+function `body<-` from {package:base} by package:methods
+function `kronecker` from {package:base} by package:methods
+--------------------------------------------------------------------------------
+-                          Used Package and Functions                          -
+--------------------------------------------------------------------------------
+{package:admiral} desc
+{package:base} library, cat, as.character, Sys.time, is.na, nrow, seq, paste0
+{package:dplyr} filter, distinct, count, arrange, slice_head
+{package:forcats} fct_inorder
+{package:ggplot2} ggplot, aes, geom_bar, labs, theme_minimal, theme, element_text, ggsave, geom_point, geom_errorbar, scale_x_continuous
+{package:gt} %>%
+{package:gtsummary} mutate
+{package:purrr} map, map_dbl
+{package:scales} label_number
+{package:stats} binom.test
+{package:utils} data
+--------------------------------------------------------------------------------
+-                         Program Run Time Information                         -
+--------------------------------------------------------------------------------
+Start time: 2026-04-29 08:48:08 EDT
+End time: 2026-04-29 08:48:10 EDT
+Run time: 2 seconds
+--------------------------------------------------------------------------------
+-                             Errors and Warnings                              -
+--------------------------------------------------------------------------------
+Errors:
+	
+
+Warnings:
+	
+--------------------------------------------------------------------------------
+-                         Messages, Output, and Result                         -
+--------------------------------------------------------------------------------
+Messages:
+	Saving 9.59 x 5.65 in image
+	Saving 9.59 x 5.65 in image
+Output:
+	Program started: 2026-04-29 08:48:08.770395 
+	Program started: 2026-04-29 08:48:09.626772 
+
+Result:
+	NULL
+--------------------------------------------------------------------------------
+-                               Log Output File                                -
+--------------------------------------------------------------------------------
+Log name: 02_create_Visualization.log
+Log path: C:/Users/suvar/Rworkdr/Genentech/programs/question_3_tlg
