@@ -11,7 +11,7 @@ library(purrr)
 library(pharmaverseadam)
 
 # Start log --------------------------------------------------
-sink("logs/02_create_Visualization.log", split = TRUE)
+# sink("logs/02_create_Visualization.log", split = TRUE)
 cat("Program started:", as.character(Sys.time()), "\n")
 
 data("adae")
@@ -90,6 +90,6 @@ plot_png2 <- ggplot(plot_dat, aes(x = pct, y = AETERM)) +
 ggsave("outputs/02_create_Visualization_2.png", plot = plot_png2)
 
 # Start log --------------------------------------------------
-sink("logs/02_create_Visualization.log", split = TRUE)
+# sink("logs/02_create_Visualization.log", split = TRUE)
 cat("Program started:", as.character(Sys.time()), "\n")
 
