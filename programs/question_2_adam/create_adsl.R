@@ -1,4 +1,12 @@
-# install.packages("admiral")   # only if not installed
+#######  Generating ADSL data set By Using Of R Language ####################### 
+#Author        :Sanumolu
+#Datasets      :adam.adsl
+##Date created  : 
+#Date Modified : 
+###############################################################################
+
+#Here i'm already install the packages. 
+# install.packages("admiral")   
 # install.packages("metacore")
 # install.packages("metatools")
 # install.packages("pharmaversesdtm")
@@ -23,7 +31,7 @@ library(stringr)
 library(logrx)
 library(haven)
 
-
+#<!-- creating working directory --> 
 # setwd("C:/Users/suvar/Rworkdr/Genentech")
 # dir.create("data/adsl", recursive = TRUE, showWarnings = FALSE)
 sink("logs/adsl.log", append = TRUE, split = TRUE)
