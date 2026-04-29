@@ -5,11 +5,12 @@
 # install.packages("stringr")
 # install.packages("logrx")
 # install.packages("gtsummary")
- install.packages("gt")
+ # install.packages("gt")
 # Load libraries & data -------------------------------------
 library(dplyr)
 library(gtsummary)
 library(gt)
+library(logrx)
  
 adsl <- pharmaverseadam::adsl
 adae <- pharmaverseadam::adae
@@ -18,7 +19,7 @@ adae <- pharmaverseadam::adae
 # dir.create("outputs", showWarnings = FALSE)
 
 # Start log --------------------------------------------------
-sink("logs/01_create_ae_summary_table.log", split = TRUE)
+# sink("logs/01_create_ae_summary_table.log", split = TRUE)
 cat("Program started:", as.character(Sys.time()), "\n")
 
 # Pre-processing --------------------------------------------
@@ -53,4 +54,4 @@ gtsave(gt_tbl, "outputs/01_create_ae_summary_table.html")
 cat("HTML created: outputs/01_create_ae_summary_table.html\n")
 
 cat("Program ended:", as.character(Sys.time()), "\n")
-sink()
+# sink()
