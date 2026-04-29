@@ -1,3 +1,10 @@
+#######  Generating ae summary table By Using Of R Language ####################### 
+#Author        :Sanumolu
+#Input Datasets  :ADAE, ADSL
+##Date created  : 
+#Date Modified : 
+###############################################################################
+
 # install.packages("xportr")
 # install.packages("dplyr")
 # install.packages("tidyr")
@@ -30,6 +37,7 @@ adae <- adae %>%
     
   )
 
+# creating table
 tbl <- adae %>% 
   tbl_hierarchical(
     variables = c(AESOC, AETERM),
