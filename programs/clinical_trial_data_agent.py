@@ -106,29 +106,3 @@ class ClinicalTrialDataAgent:
         return self.execute_query(parsed_output)
 
 
-# Test Script ------------------------------------------------
-
-if __name__ == "__main__":
-
-    # Input file
-    ae = pd.read_csv("adae.csv")
-
-    agent = ClinicalTrialDataAgent(ae_df=ae, use_mock_llm=True)
-
-    test_questions = [
-        "Give me the subjects who had adverse events of Moderate severity.",
-        "Which subjects had Headache?",
-        "Show me subjects with Cardiac adverse events."
-    ]
-
-    for question in test_questions:
-        print("\n====================================")
-        print("Question:", question)
-
-        result = agent.ask(question)
-
-        print("\nResult:")
-        print("Target Column:", result["target_column"])
-        print("Filter Value:", result["filter_value"])
-        print("Unique Subject Count:", result["unique_subject_count"])
-        print("Matching Subject IDs:", result["matching_subject_ids"])
