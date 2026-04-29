@@ -1,3 +1,10 @@
+#######  Generating visualization of Adverse Events Reporting By Using Of R Language ####################### 
+#Author        :Sanumolu
+#Input Datasets  :ADAE, ADSL
+##Date created  : 
+#Date Modified : 
+###############################################################################
+
 # install.packages("dplyr")
 # install.packages("ggplot2")
 # install.packages("forcats")
