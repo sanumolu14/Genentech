@@ -1,3 +1,11 @@
+#######  Generating Disposition data set By Using Of R Language ####################### 
+#Author        :Sanumolu
+#Datasets      :SDTM.DS 
+##Date created  : 
+#Date Modified : 
+###############################################################################
+
+#Here i'm already install the packages. 
 # install.packages("sdtm.oak")
 # install.packages("pharmaverseraw")
 # install.packages("dplyr")
@@ -14,6 +22,7 @@ library(logrx)
 library(haven)
 
 # logrx::axecute("01_create_ds_domain.R")
+#<!-- creating working directory --> 
 getwd()
 setwd("C:/Users/suvar/Rworkdr/Genentech")
 
@@ -23,6 +32,8 @@ dir.create("logs", recursive = TRUE, showWarnings = FALSE)
 sink("logs/ds.log", append = TRUE, split = TRUE)
 
 cat("DS program started:", as.character(Sys.time()), "\n")
+
+#<!-- Reading ds_raw and sdtm.dm into R --> 
 
 ds_raw <- pharmaverseraw::ds_raw
 dm <- pharmaversesdtm::dm
